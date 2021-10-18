@@ -26,6 +26,7 @@ Look for refactorings in the class `GameApp`.
 
 ```
 Replace string literals with named constants
+Replace magic number with symbolic constant
 Replace side effect with return value
 Add parameters instead of accessing attributes
 ```
