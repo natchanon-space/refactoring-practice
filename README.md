@@ -10,9 +10,10 @@ Each subdirectory contains some code that needs refactoring.
 
 ## `time/timestamp.py`
 
-* Rename method -> Name of the function is not right in term of python naming convention.
-* Extract & move medthod -> extact the condition for valid timestamp to make function is more clear.
-
+```
+Rename method -> name of the function is not right in term of python naming convention.
+Extract & move medthod -> extact the condition for valid timestamp to make function is more clear.
+```
 
 ## `game_framework/gamelib.py`
 
@@ -22,6 +23,12 @@ Look for refactorings in the class `GameApp`.
 
 * Encapsulate a collection - provide behavior that subclasses of GameApp need instead of requiring them to manipulate a collection that belongs to the GameApp class.
   - Hint: `elements`
+
+```
+Replace string literals with named constants
+Replace side effect with return value
+Add parameters instead of accessing attributes
+```
 
 ## `recipe/recipe.py` and `recipe/main.py`
 

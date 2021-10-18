@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter.constants import NSEW
 import tkinter.ttk as ttk
 
 class GameCanvasElement():
@@ -92,8 +93,8 @@ class GameApp(ttk.Frame):
         
         self.update_delay = update_delay
 
-        self.grid(sticky="news")
-        self.create_canvas()
+        self.grid(sticky=NSEW)
+        self.canvas = self.create_canvas(self.canvas_width, self.canvas_height)
 
         self.elements = []
         self.init_game()
@@ -101,12 +102,10 @@ class GameApp(ttk.Frame):
         self.parent.bind('<KeyPress>', self.on_key_pressed)
         self.parent.bind('<KeyRelease>', self.on_key_released)
         
-    #TODO refactor this - don't depend on side effects
-    def create_canvas(self):
-        self.canvas = tk.Canvas(self, borderwidth=0,
-            width=self.canvas_width, height=self.canvas_height, 
-            highlightthickness=0)
-        self.canvas.grid(sticky="news")
+    def create_canvas(self, width, height):
+        canvas = tk.Canvas(self, borderwidth=0, width=width, height=height, highlightthickness=0)
+        canvas.grid(sticky=NSEW)
+        return canvas
 
     def animate(self):
         self.pre_update()
