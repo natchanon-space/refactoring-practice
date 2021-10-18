@@ -31,6 +31,7 @@ def create_time_from_timestamp(timestamp: str) -> datetime.time:
     if len(args) != 3:
         raise ValueError('Timestamp must be "hh:mm:ss"')
     else:
+        hours, minutes, seconds = [int(t) for t in args]
         # if the timestamp is not valid, this may raise TypeError or ValueError
-        if 0 <= int(args[0]) <= 23 and 0 <= int(args[1]) < 60 and 0 <= int(args[2]) < 60:
-            return datetime.time(int(args[0]), int(args[1]), int(args[2]))
+        if 0 <= hours <= 23 and 0 <= minutes < 60 and 0 <= seconds < 60:
+            return datetime.time(hours, minutes, seconds)
