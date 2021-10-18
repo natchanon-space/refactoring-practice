@@ -45,9 +45,10 @@ The Recipe class defines a recipe for a hot beverage with attributes:
 
 Refactor `main.py`.  What can you do to eliminate the long, boring code?
 
-
-
-
+```
+Repalce redundant code with a creational method
+Extract method
+```
 
 
 ## Resources
