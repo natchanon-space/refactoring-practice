@@ -10,8 +10,8 @@ Each subdirectory contains some code that needs refactoring.
 
 ## `time/timestamp.py`
 
-* Rename method
-* Extract & move medthod
+* Rename method -> Name of the function is not right in term of python naming convention.
+* Extract & move medthod -> extact the condition for valid timestamp to make function is more clear.
 
 
 ## `game_framework/gamelib.py`
