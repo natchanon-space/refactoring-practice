@@ -11,6 +11,7 @@ Each subdirectory contains some code that needs refactoring.
 ## `time/timestamp.py`
 
 * Rename method
+* Extract & move medthod
 
 
 ## `game_framework/gamelib.py`
